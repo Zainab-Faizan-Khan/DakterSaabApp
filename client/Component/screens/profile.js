@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, ScrollView, Image, SafeAreaView, StyleSheet } from 'react-native';
-
-import { SERVER_URL } from '../../constants';
+import { SERVER_URL, BGColor,rgbaColor } from '../../constants';
 import { useNavigation } from '@react-navigation/native';
 
 // Backend API endpoint to retrieve data from MongoDB
-const BGColor = "#6a6acc"
-const rgbaColor = 'rgba(106, 106, 204, 0.2)'
+// const BGColor = "#6a6acc"
+// const rgbaColor = 'rgba(106, 106, 204, 0.2)'
 
 const Profile = ({ route }) => {
   const [editMode, setEditMode] = useState(false);
@@ -100,10 +99,6 @@ const Profile = ({ route }) => {
 };
 
 export default Profile
-//  
-
-//  
-
 
 const styles = StyleSheet.create({
   container: {
@@ -125,6 +120,7 @@ const styles = StyleSheet.create({
   profileImageContainer: {
     alignItems: 'center',
     marginTop: 20,
+    zIndex:10,
   },
 
   profileImage: {
@@ -138,7 +134,7 @@ const styles = StyleSheet.create({
   datadiv: {
     backgroundColor: rgbaColor,
     position: 'absolute',
-    top: 170,
+    top: 180,
     alignSelf:'center',
     paddingLeft:25,
     paddingRight:25,

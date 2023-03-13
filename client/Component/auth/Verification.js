@@ -1,7 +1,6 @@
-import {Text,View,Image,TouchableOpacity,TextInput,ScrollView,} from 'react-native';
+import {Text,View,Image,TouchableOpacity,TextInput,ScrollView,StyleSheet} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import styleAuth from './styleAuth/indexLogin';
-import { SERVER_URL } from '../../constants';
+import { SERVER_URL, BGColor, rgbaColor } from '../../constants';
 const Verification = ({navigation, route}) => {
   const {userdata} = route.params;
   const [errormsg, setErrormsg] = useState(null);
@@ -50,9 +49,8 @@ const Verification = ({navigation, route}) => {
   };
   return (
     <>
-      <View style={styleAuth.container}>
+      <View style={styleAuth.container1}>
         <Image
-        
           source={require('../assets/bg.jpg')}
           style={styleAuth.imageBG}
         />
@@ -95,3 +93,93 @@ const Verification = ({navigation, route}) => {
 };
 
 export default Verification;
+
+
+const styleAuth = StyleSheet.create({
+  container1: {
+    // backgroundColor:"#A7C7E7",
+    backgroundColor: "#ADD8E6",
+    padding: 20,
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+  },
+  // imageBG: {
+  //     // position: "absolute",
+  //     // zIndex: -1,
+  //     height: 250,
+  //     width: 250,
+  //   },
+
+  s2: {
+    // display: "flex",
+    // width: "100%",
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 20,
+  },
+  h1: {
+    marginTop: 10,
+    fontWeight: "600",
+    fontSize: 26,
+    color: "black",
+    fontFamily: "serif",
+    textAlign: "center"
+  },
+
+  label: {
+    fontWeight: "200",
+    fontSize: 14,
+    color: "black",
+    fontFamily: "serif",
+    marginTop: 8,
+    // marginBottom: 5
+  },
+  input: {
+    backgroundColor: rgbaColor,
+    borderRadius: 10,
+    padding: 8,
+    color: "black",
+    fontFamily: "serif",
+  },
+  fp: {
+    alignItems: 'flex-end'
+  },
+  btnStyle: {
+    backgroundColor: BGColor,
+    height: 50,
+    width: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: 10,
+    marginTop: 20,
+    marginBottom: 10,
+
+  },
+  btntext: {
+    fontFamily: 'serif',
+    color: 'white',
+  },
+  h3: {
+    fontSize: 12,
+    color: "grey",
+    fontFamily: "serif",
+    textAlign: "center",
+    // marginTop: 10,
+  },
+  link: {
+    fontSize: 12,
+    color: "blue",
+    fontFamily: "serif",
+    marginTop: 6,
+  },
+// varify
+container2: {
+  marginTop: 140,
+  padding: 20,
+  // height: "100%",
+  display: "flex",
+  justifyContent: "center",
+}
+})

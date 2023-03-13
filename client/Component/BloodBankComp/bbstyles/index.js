@@ -42,38 +42,7 @@ const styles = StyleSheet.create({
         width: 25,
         height: 25,
       },
- //-----------------------------Blood Page-----------------------------
- cdiv: {
-    marginTop: verticalScale(25),
-    marginLeft: horizontalScale(35),
-    // backgroundColor:'pink',
-  },
-  cimg: {
-    marginRight: 25,
-    borderRadius: 15,
-    height: 520,
-  },
-  btndiv: {
-    // backgroundColor:'yellow',
-    // marginTop: 20,
-  },
-  BBtn: {
-    backgroundColor: '#6a6acc',
-    height: 50,
-    width: 280,
-    marginHorizontal: 65,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 20,
-    elevation: 90,
-    shadowColor: 'red',
-    marginBottom: verticalScale(28),
-  },
-  BText: {
-    fontSize: 20,
-    fontFamily: 'serif',
-    color: 'white',
-  },
+ 
   // ----------------------- Find Blood bank--------------------------------------
 
   dropdown: {

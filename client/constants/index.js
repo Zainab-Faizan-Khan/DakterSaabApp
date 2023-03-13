@@ -1,6 +1,6 @@
 
 
-export const SERVER_URL = "http://192.168.0.110:3000";
+export const SERVER_URL = "http://192.168.0.111:3000";
 
 // export const SERVER_URL = "http://10.57.64.19:3000";
 
